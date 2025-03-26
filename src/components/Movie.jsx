@@ -1,5 +1,5 @@
 import axios from "../utils/Axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "./templates/Loader";
 import TopNav from "./templates/TopNav";

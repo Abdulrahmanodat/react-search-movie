@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { useState } from "react";
 const Dropdown = ({ title, options, func }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(title);

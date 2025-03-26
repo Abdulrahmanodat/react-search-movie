@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import SideBar from "./templates/SideBar";
 import TopNav from "./templates/TopNav";
 import Header from "./templates/Header";

@@ -2,7 +2,7 @@ export { removetv } from "../reducers/tvSlice";
 import axios from "../../utils/Axios";
 import { loadtv } from "../reducers/tvSlice";
 
-export const asyncLoadtv = (id) => async (dispatch, getState) => {
+export const asyncLoadtv = (id) => async (dispatch) => {
   try {
     const  detail  = await axios.get(`/tv/${id}`);
     const  externalid  = await axios.get(`/tv/${id}/external_ids`);

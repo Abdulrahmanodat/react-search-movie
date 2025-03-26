@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncLoadmovie, removemovie } from "../Store/actions/movieActions";
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
@@ -43,14 +43,14 @@ const Moviedetails = () => {
           href={info.detail.homepage}
           className="hover:text-[#6556CD]  cursor-pointer mr-2 "
         >
-          <i class="ri-external-link-fill"></i>
+          <i className="ri-external-link-fill"></i>
         </a>
         <a
           target="_blank"
           href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
           className="hover:text-[#6556CD]  cursor-pointer mr-2 "
         >
-          <i class="ri-earth-fill"></i>
+          <i className="ri-earth-fill"></i>
         </a>
         <a
           target="_blank"
@@ -97,7 +97,7 @@ const Moviedetails = () => {
             </h1>
             <h1>
               {info.detail.genres &&
-                info.detail.genres.map((c, i) => c.name).join(",")}
+                info.detail.genres.map((c) => c.name).join(",")}
             </h1>
             <h1>
               {Math.floor(info.detail.runtime / 60)}hr
@@ -129,7 +129,7 @@ const Moviedetails = () => {
             to={`${pathname}/trailer`}
             className="text-white bg-[#6556CD] hover:bg-[#5246A3] transition-colors duration-200 px-2 py-1 rounded-sm text-lg font-semibold ml-2 inline-block mt-5"
           >
-            <i class="ri-play-fill"></i> Play Trailer
+            <i className="ri-play-fill"></i> Play Trailer
           </Link>
         </div>
       </div>
@@ -149,6 +149,7 @@ const Moviedetails = () => {
                   info.watchproviders.flatrate.map((c, i) => {
                     return (
                       <img
+                      key={i}
                         title={c.provider_name}
                         src={`https://image.tmdb.org/t/p/original/${c.logo_path}`}
                         className="w-7 h-7 m-2 rounded-lg hover:scale-110 transform transition duration-300 ease-in-out"
@@ -171,7 +172,8 @@ const Moviedetails = () => {
                   info.watchproviders.rent.length > 0 &&
                   info.watchproviders.rent.map((c, i) => {
                     return (
-                      <img
+                      <img 
+                      key={i}
                         title={c.provider_name}
                         src={`https://image.tmdb.org/t/p/original/${c.logo_path}`}
                         className="w-7 h-7 m-2 rounded-lg hover:scale-110 transform transition duration-300 ease-in-out"
@@ -197,6 +199,7 @@ const Moviedetails = () => {
                   info.watchproviders.buy.map((c, i) => {
                     return (
                       <img
+                       key ={i}
                         title={c.provider_name}
                         src={`https://image.tmdb.org/t/p/original/${c.logo_path}`}
                         className="w-7 h-7 m-2 rounded-lg hover:scale-110 transform transition duration-300 ease-in-out"

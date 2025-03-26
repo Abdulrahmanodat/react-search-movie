@@ -1,4 +1,3 @@
-import React from "react";
 import notfoundgif from "../assets/404.gif";
 import { useNavigate } from "react-router-dom";
 

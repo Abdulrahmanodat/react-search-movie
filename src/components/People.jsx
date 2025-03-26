@@ -1,9 +1,8 @@
 import axios from "../utils/Axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "./templates/Loader";
 import TopNav from "./templates/TopNav";
-import Dropdown from "./templates/Dropdown";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Cards from "./templates/Cards";
 

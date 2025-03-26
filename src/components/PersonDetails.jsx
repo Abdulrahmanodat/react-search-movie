@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncLoadperson, removeperson } from "../Store/actions/personAction";
 import {
   Link,
-  Outlet,
   useLocation,
   useNavigate,
   useParams,
@@ -14,7 +13,6 @@ import Dropdown from "./templates/Dropdown";
 
 const PersonDetails = () => {
   
-  const { pathname } = useLocation();
   const navigate = useNavigate();
   const data = useSelector((state) => state.person);
   const { info } = data;

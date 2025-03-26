@@ -1,5 +1,5 @@
 import axios from "../../utils/Axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import noimage from "../../assets/noimage.jpg";
 
